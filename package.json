@@ -7,25 +7,33 @@
   "private": true,
   "dependencies": {
     "@remotion/cli": "4.0.410",
+    "@remotion/tailwind-v4": "4.0.410",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.410",
-    "@remotion/tailwind-v4": "4.0.410",
     "tailwindcss": "4.0.0"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.410",
+    "@remotion/player": "^4.0.411",
     "@types/react": "19.2.7",
+    "@types/react-dom": "^19.2.3",
     "@types/web": "0.0.166",
-    "eslint": "9.19.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.2",
+    "gh-pages": "^6.3.0",
     "prettier": "3.6.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vite": "^6.4.1"
   },
   "scripts": {
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "build:web": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build:web && gh-pages -d dist"
   },
   "sideEffects": [
     "*.css"
